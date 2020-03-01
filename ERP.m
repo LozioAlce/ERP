@@ -24,10 +24,10 @@ u_next = u_0;               %% for iterative formulation see Eq 11
 kk =1;
 tic
 
-while c_prev < 1 && rank(M_eps_k) == n_t && kk <= n_u-n_t+1
+while not ((c_prev == 1) || rank(M_eps_k) < n_t )   %% Eq 19
 
     u_prev = u_next;
-    u_acc_k = pinv(M_eps_k)*tau_acc;            %% Eq_11.2
+    u_acc_k = pinv(M_eps_k)*tau_acc;            %% Eq 11.2
 %% Start Computing d_max    
         d_i_k_Max = (u_max - u_prev)./u_acc_k;  %% Eq 18
         d_i_k_Min = (u_min - u_prev)./u_acc_k;  %% Eq 18
