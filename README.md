@@ -21,3 +21,11 @@ Title: "Constrained Dynamic Control Allocation in the Presence of Singularity an
 https://arxiv.org/abs/1607.05209<br/>
 
 The same solution for the example at section IV is found with this simple modification.
+
+# Update 2
+Added a Quadratic Programming example to compare the solutions.<br/> 
+QP solution is based on the python package GEKKO.<br/> <br/> 
+To install GEKKO:<br/> 
+pip3 install gekko<br/> <br/> 
+To install tabulate python package (for printing final results):<br/>
+pip3 install tabulate<br/> 
